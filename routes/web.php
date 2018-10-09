@@ -24,5 +24,5 @@ Route::group(['namespace'=>'web'],function(){
 
 //后台
 Route::group(['namespace'=>'Admin','prefix'=>'admin'],function(){
-	Route::get('/','AdminController@login')->name('login');
+	Route::get('/','AdminController@login')->name('admin.login');
 });
