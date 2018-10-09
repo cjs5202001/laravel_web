@@ -14,6 +14,15 @@
 /*Route::get('/', function () {
     return view('welcome');
 });*/
+/*
+prefix：路由分组
+*/
+//前台
 Route::group(['namespace'=>'web'],function(){
 	Route::get('/','MainController@home');
+});
+
+//后台
+Route::group(['namespace'=>'Admin','prefix'=>'admin'],function(){
+	Route::get('/','AdminController@login')->name('login');
 });
