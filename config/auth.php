@@ -45,6 +45,10 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+        'admin' =>[
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
     ],
 
     /*
@@ -68,6 +72,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+         'admins' =>[
+            'driver' =>'eloquent',
+            'model' => \App\Models\Admin::class, //模型的位置，这里我放在Models目录，laravel默认在app目录下，你可以放在任何目录
         ],
 
         // 'users' => [
