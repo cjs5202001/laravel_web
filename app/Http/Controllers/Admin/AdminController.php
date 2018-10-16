@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class AdminController extends CommentController
 {
     public function login(request $re)
-    {
+    { 
     	if($re->isMethod('get')){
     		if(Auth::guard('admin')->check()){ //已登录跳转
 				return redirect('/admin/main');
@@ -29,8 +29,6 @@ class AdminController extends CommentController
     		}else{ //验证未通过
     			$this->_loginJson(403);
     		}
-			
-    		print_r($user);	print_r($id);
     	}
     }
 }
